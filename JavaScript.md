@@ -37,3 +37,6 @@ defer、async都是异步下载，但是执行时刻不一致；
 - html的版本html4.0中定义了defer，html5.0中定义了async；这将造成由于浏览器版本的不同而对其支持的程度不同；
 - 每一个async属性的脚本都在它下载结束之后立刻执行，同时会在window的load事件之前执行，所以就有可能出现脚本执行顺序被打乱 的情况；
 - 每一个defer属性的脚本都是在页面解析完毕之后，按照原本的顺序执行，同时会在document的DOMContentLoaded之前执行；
+
+#### 取消事件处理函数默认行为的方法：
+ onclick = "showPic(this);return false;".return false能够让链接的默认行为不被触发。
